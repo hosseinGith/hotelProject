@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js "></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/helpers.js"
+      integrity="sha512-08S2icXl5dFWPl8stSVyzg3W14tTISlNtJekjsQplv326QtsmbEVqL4TFBrRXTdEj8QI5izJFoVaf5KgNDDOMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.1/chartjs-plugin-zoom.min.js"
+      integrity="sha512-wUYbRPLV5zs6IqvWd88HIqZU/b8TBx+I8LEioQ/UC0t5EMCLApqhIAnUg7EsAzdbhhdgW07TqYDdH3QEXRcPOQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+    <canvas id="asd" style="width: 100%; max-width: 700px"></canvas>
+    <script>
+      let xValues = [
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Argentina",
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Argentina",
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Argentina",
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Argentina",
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Argentina",
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Argentina",
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Argentina",
+      ];
+      let yValues = [55, 49, 44, 24, 15];
+      let yValues2 = [5, 9, 4, 4, 5];
+      let barColors = ["red", "green", "blue", "orange", "brown"];
+      // chart = new Chart("myChart", {
+      //   type: "line",
+      //   data: {
+      //     labels: xValues,
+      //     datasets: [
+      //       {
+      //         data: [...yValues],
+      //         borderColor: "#ff0101",
+      //         fill: false,
+      //       },
+      //     ],
+      //   },
+      //   options: {
+      //     legend: { display: false },
+      //     plugins: {
+      //       zoom: {
+      //         pan: {
+      //           enabled: true,
+      //           modifierKey: "ctrl",
+      //           scaleMode: "y",
+      //           overScaleMode: "y",
+      //           threshold: 1,
+      //         },
+      //         zoom: {
+      //           wheel: {
+      //             enabled: true,
+      //           },
+      //           pinch: {
+      //             enabled: true,
+      //           },
+      //           mode: "x",
+      //         },
+      //       },
+      //     },
+      //   },
+      // });
+    </script>
+
+    <script>
+      console.log(Math.floor(Math.random() * innerWidth));
+      for (let index = 0; index < 1000; index++) {
+        yValues.push(Math.floor(Math.random() * innerWidth));
+        yValues2.push(Math.floor(Math.random()));
+      }
+      new Chart("asd", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: "green",
+              data: yValues,
+              yAxisID: "default",
+              borderColor: "red",
+            },
+            {
+              backgroundColor: "blue",
+              data: yValues2,
+              yAxisID: "type",
+              borderColor: "blue",
+            },
+          ],
+        },
+        //     legend: { display: false },
+
+        options: {
+          responsive: true,
+          legend: { display: false },
+          plugins: {
+            zoom: {
+              pan: {
+                enabled: true,
+                scaleMode: "y",
+                overScaleMode: "y",
+                threshold: 1,
+              },
+              zoom: {
+                wheel: {
+                  enabled: true,
+                },
+                pinch: {
+                  enabled: true,
+                },
+                mode: "x",
+              },
+            },
+          },
+          scales: {
+            type: {
+              position: "right",
+              gridLines: false,
+              display: true,
+              beginAtZero: true,
+            },
+            default: {
+              position: "left",
+              gridLines: false,
+              display: true,
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

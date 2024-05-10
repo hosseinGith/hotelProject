@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <title>Home / خانه</title>
+  </head>
+  <body class="homePageBgColor">
+    <header>
+      <section class="headerSection">
+        <div class="container">
+          <div class="headerDiv">
+            <div class="aboutLocition">
+              <span>مکان جاری</span>
+              <h3>
+                <i class="fa fa-location-dot"></i> لورم استفاده از طراحان گرافیک
+                است
+              </h3>
+            </div>
+            <button class="notification headerBtnsStyle">
+              <div class="notifDot"></div>
+              <i class="fa fa-bell"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <form class="searchBarHomePage">
+            <button>
+              <i class="fa fa-search"></i>
+            </button>
+            <input
+              placeholder="جستجو کنید..."
+              type="search"
+              name="hotelSearch"
+              id="hotelSearch"
+            />
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="aboutProducts">
+            <h4>لیست های برجسته</h4>
+            <a href="#" class="seeAllColor">مشاهده همه</a>
+          </div>
+          <div class="productsHomePageContainer">
+            <div class="productsHomePage"></div>
+          </div>
+        </div>
+      </section>
+      <section class="absolutSection">
+        <div class="container">
+          <div class="header">
+            <div class="favoriteCont">
+              <a href="#" class="headerBtnsStyle">
+                <i class="fa fa-heart"></i>
+              </a>
+            </div>
+            <div class="aboutPage"><span>جزئیات</span></div>
+            <div class="backBtnCont">
+              <button id="backBtn" class="headerBtnsStyle">
+                <i class="fa fa-arrow-left"></i>
+              </button>
+            </div>
+          </div>
+          <div class="main">
+            <div class="swiper hotelPhotos">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/pexels-jimbear-1458457.jpg"
+                    alt="xxx"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/pexels-jimbear-1458457.jpg"
+                    alt="xxx"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/images/pexels-jimbear-1458457.jpg"
+                    alt="xxx"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="aboutHotelOtherPage">
+              <div class="content">
+                <h2>هتل - lorem</h2>
+                <p><i class="nightPrice fa fa-location-dot"></i> lorem</p>
+                <p class="pricesHotel">
+                  <i class="fa far fa-money-bill-alt"></i> 2000000
+                </p>
+              </div>
+            </div>
+            <div class="hotelOptions">
+              <div class="item">
+                <div><i class="fa fa-cart-arrow-down"></i></div>
+                <span>خدمات</span>
+              </div>
+              <div class="item">
+                <div><i class="fa fa-cart-arrow-down"></i></div>
+                <span>Lorem</span>
+              </div>
+              <div class="item">
+                <div><i class="fa fa-cart-arrow-down"></i></div>
+                <span>غذا</span>
+              </div>
+            </div>
+            <div class="aboutHotelOtherPageText">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+                incidunt quia adipisci. Iure porro consectetur, recusandae
+                cupiditate exercitationem tempore eaque architecto. Aperiam
+                ratione tempore dolor ipsam ab porro laborum nulla!
+              </p>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="productPrices">
+              <span>قیمت</span>
+              <p>شب <span class="prices">2500000</span></p>
+            </div>
+            <button id="reserveProduct">رزرو</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <div class="container"></div>
+      </section>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

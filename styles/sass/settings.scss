@@ -1,0 +1,25 @@
+@font-face {
+  font-family: vazir;
+  src: url("../../assets/fonts/vazir/vazir.ttf") format("truetype");
+  src: url("../../assets/fonts/vazir/vazir.woff") format("woff");
+}
+:root {
+  --icons-color: #439999;
+  --homePageBgColor: #eae7e7;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+body {
+  font-family: vazir;
+}

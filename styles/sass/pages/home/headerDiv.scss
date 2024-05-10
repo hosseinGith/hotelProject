@@ -1,0 +1,37 @@
+.headerSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--homePageBgColor);
+  border-bottom: 1px solid #00000033;
+  width: 100%;
+  z-index: 3;
+  .headerDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    .aboutLocition {
+      h3 {
+        font-size: 16px;
+        i {
+          font-size: 18px;
+          color: var(--icons-color);
+        }
+      }
+    }
+    .notification {
+      .notifDot {
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        border-radius: 50%;
+      }
+    }
+  }
+}

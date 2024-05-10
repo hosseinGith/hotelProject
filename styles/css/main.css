@@ -1,0 +1,348 @@
+@font-face {
+  font-family: vazir;
+  src: url("../../assets/fonts/vazir/vazir.ttf") format("truetype");
+  src: url("../../assets/fonts/vazir/vazir.woff") format("woff");
+}
+:root {
+  --icons-color: #439999;
+  --homePageBgColor: #eae7e7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: vazir;
+}
+
+.homePageBgColor {
+  background-color: var(--homePageBgColor);
+}
+
+.seeAllColor {
+  color: var(--icons-color);
+}
+
+.signUpBtn {
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  max-width: 250px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.headerBtnsStyle {
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1098039216);
+}
+
+.absolutSection {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: var(--homePageBgColor);
+  display: none;
+}
+.absolutSection > .container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 80% 10%;
+}
+.absolutSection .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 15px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.absolutSection .header .headerBtnsStyle {
+  color: #000;
+}
+.absolutSection .header .aboutPage {
+  padding: 10px 20px;
+  height: max-content;
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.absolutSection .main .hotelPhotos .swiper-slide {
+  height: 350px;
+}
+.absolutSection .main .hotelPhotos .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+.absolutSection .main .aboutHotelOtherPage {
+  padding: 10px 20px;
+}
+.absolutSection .main .aboutHotelOtherPage .content {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.absolutSection .main .aboutHotelOtherPage .content i {
+  color: var(--icons-color);
+}
+.absolutSection .main .hotelOptions {
+  display: flex;
+  justify-content: space-around;
+  background-color: #99cfcf;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  padding: 20px 10px;
+  margin: 30px auto;
+}
+.absolutSection .main .hotelOptions .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.absolutSection .main .hotelOptions .item div {
+  background-color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  color: #2d8585;
+}
+.absolutSection .footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+}
+.absolutSection .footer .productPrices {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.absolutSection .footer .productPrices .prices {
+  color: #0f6b6b;
+}
+.absolutSection .footer #reserveProduct {
+  padding: 10px 40px;
+  background-color: #131212;
+  color: #fff;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.headerSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--homePageBgColor);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 3;
+}
+.headerSection .headerDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+}
+.headerSection .headerDiv .aboutLocition h3 {
+  font-size: 16px;
+}
+.headerSection .headerDiv .aboutLocition h3 i {
+  font-size: 18px;
+  color: var(--icons-color);
+}
+.headerSection .headerDiv .notification .notifDot {
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.searchBarHomePage {
+  width: 70%;
+  max-width: 600px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.searchBarHomePage button {
+  flex-basis: 10%;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  font-size: 18px;
+}
+.searchBarHomePage button i {
+  rotate: 90deg;
+}
+.searchBarHomePage input {
+  width: 100%;
+  flex-basis: 90%;
+  padding: 10px;
+  font-family: inherit;
+}
+
+.aboutProducts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.productsHomePageContainer {
+  padding: 0 20px;
+}
+.productsHomePageContainer .productsHomePage {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(300px, auto));
+  column-gap: 40px;
+  row-gap: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.productsHomePageContainer .productsHomePage .item {
+  padding: 20px;
+}
+.productsHomePageContainer .productsHomePage .item .productImageCont {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.productsHomePageContainer .productsHomePage .item .productImageCont img {
+  width: 100%;
+}
+.productsHomePageContainer .productsHomePage .item .aboutProductContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productsHomePageContainer .productsHomePage .item .aboutProductContainer i {
+  color: var(--icons-color);
+}
+.productsHomePageContainer .productsHomePage .item .aboutProductContainer .hotelLocition {
+  font-size: 17px;
+}
+
+.signUpMain {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60% 40%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.slignUpSignInBgImage {
+  background: url("../../../../assets/images/pexels-jimbear-1458457.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.welcomeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 15px;
+}
+.welcomeContainer .welcomeContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.welcomeContainer .welcomeContent h2 {
+  font-size: 20px;
+}
+.welcomeContainer .welcomeContent p {
+  font-size: 14px;
+}
+.welcomeContainer .slignUpSignInCont {
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.welcomeContainer .slignUpSignInCont span a {
+  color: rgb(22, 153, 240);
+}
+
+@media screen and (width > 792px) {
+  .signUpMain {
+    display: block;
+  }
+  .signUpMain .welcomeContainer {
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px #000;
+    background-color: rgba(255, 255, 255, 0.2274509804);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6705882353);
+  }
+  .searchBarHomePage {
+    max-width: 600px;
+  }
+  .absolutSection .main .hotelPhotos .swiper-slide {
+    height: 400px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

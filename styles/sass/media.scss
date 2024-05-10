@@ -1,0 +1,29 @@
+@media screen and (width>792px) {
+  .signUpMain {
+    display: block;
+    .welcomeContainer {
+      width: max-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 10px #000;
+      background-color: #ffffff3a;
+      border-radius: 20px;
+      background-color: #ffffffab;
+    }
+  }
+  .searchBarHomePage {
+    max-width: 600px;
+  }
+  .absolutSection {
+    .main {
+      .hotelPhotos {
+        .swiper-slide {
+          height: 400px;
+        }
+      }
+    }
+  }
+}
